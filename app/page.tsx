@@ -1,9 +1,11 @@
-import Components_LandingPage from "@/app/pages/landingPage/page";
+// app/page.tsx
+import { redirect } from "next/navigation";
+import AuthLogin from "@/app/auth/login";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center min-w-full">
-      <Components_LandingPage />
-    </div>
+    <main className="min-h-screen min-w-screen">
+      <AuthLogin />
+    </main>
   );
 }

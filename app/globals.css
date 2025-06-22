@@ -27,34 +27,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.navbar {
-  color: var(--navbar-text);
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-tertiary {
-  color: var(--tertiary);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-}
-
-.bg-secondary {
-  background-color: var(--secondary);
-}
-
-.bg-tertiary {
-  background-color: var(--tertiary);
-}
-
 @layer utilities {
   .text-navbar {
     color: var(--navbar-text) !important;
@@ -73,6 +45,46 @@ body {
   .card-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-base {
+    background-color: var(--background);
+  }
+
+  .text-base {
+    color: var(--text);
+  }
+
+  .text-headline {
+    color: var(--headline);
+  }
+
+  .text-paragraph {
+    color: var(--paragraph);
+  }
+
+  .text-accent {
+    color: var(--text-secondary);
+  }
+
+  .border-base {
+    border-color: var(--border);
+  }
+
+  .bg-accent {
+    background-color: var(--secondary);
+  }
+
+  .text-white {
+    color: var(--background);
+  }
+
+  .hover-accent:hover {
+    color: var(--text-secondary);
+  }
+
+  .input-icon {
+    color: var(--text-secondary);
   }
 }
 
