@@ -1,6 +1,6 @@
 // app/page.tsx
 import { redirect } from "next/navigation";
-import AuthLogin from "@/app/auth/login";
+import AuthLogin from "@/app/auth/login/page";
 
 export default function Home() {
   return (
