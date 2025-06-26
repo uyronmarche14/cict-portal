@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { HiArrowRight, HiAcademicCap } from "react-icons/hi";
+import News from "@/app/components/landingpage/news";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,16 +29,13 @@ const itemVariants: Variants = {
 
 const Components_LandingPage = () => {
   return (
-    <div
-      className="w-full overflow-hidden relative"
-      style={{ background: "var(--background)" }}
-    >
-      <section className="relative min-h-screen flex items-center justify-center">
+    <div className="min-w-full ">
+      <section className="relative min-w-full min-h-screen flex items-center justify-center">
         {/* Additional decorative elements on top of glitch */}
 
         {/* Main Content - Centered */}
         <motion.div
-          className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center"
+          className="relative z-20 w-full max-w-7xl px-6 sm:px-8 lg:px-12 text-center"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -168,6 +166,7 @@ const Components_LandingPage = () => {
           </motion.div>
         </motion.div>
       </section>
+      <News />
     </div>
   );
 };

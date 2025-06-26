@@ -1,7 +1,7 @@
 @import "tailwindcss";
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #ffffff;
   --primary: #ffffff;
   --primary-hover: rgba(110, 86, 207, 0.2);
   --secondary: #8b7fcf;
@@ -39,7 +39,8 @@ body {
   }
 
   .card-hover {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: var(--tertiary);
   }
 
   .card-hover:hover {
@@ -48,43 +49,59 @@ body {
   }
 
   .bg-base {
-    background-color: var(--background);
+    background-color: var(--background) !important;
   }
 
   .text-base {
-    color: var(--text);
+    color: var(--text) !important;
   }
 
   .text-headline {
-    color: var(--headline);
+    color: var(--headline) !important;
   }
 
   .text-paragraph {
-    color: var(--paragraph);
+    color: var(--paragraph) !important;
   }
 
   .text-accent {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
   }
 
   .border-base {
-    border-color: var(--border);
+    border-color: var(--border) !important;
   }
 
   .bg-accent {
-    background-color: var(--secondary);
+    background-color: var(--secondary) !important;
   }
 
   .text-white {
-    color: var(--background);
+    color: #fff !important;
   }
 
   .hover-accent:hover {
-    color: var(--text-secondary);
+    background-color: var(--tertiary) !important;
+    color: #fff !important;
   }
 
   .input-icon {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
+  }
+
+  /* Button accent utility for consistent themed buttons */
+  .btn-accent {
+    background-color: var(--secondary) !important;
+    color: #fff !important;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-accent:hover,
+  .btn-accent:focus {
+    background-color: var(--tertiary) !important;
+    color: #fff !important;
   }
 }
 
