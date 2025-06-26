@@ -10,6 +10,7 @@ import tcu from "@/public/tcu.png";
 import Input from "@/app/components/ui/inputField";
 import Button from "@/app/components/ui/button";
 import { RegistrationFormData } from "@/app/types/auth";
+import { registerStudent } from "@/app/api/auth";
 
 export default function RegistrationForm() {
   const router = useRouter();
@@ -44,11 +45,14 @@ export default function RegistrationForm() {
 
     try {
       setIsLoading(true);
-      // TODO: Replace with actual API call
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated API call
-      router.push("/dashboard"); // Redirect after successful registration
+      const response = await registerStudent(formData);
+      console.log("Registration successful:", response);
+      router.push("/auth/login"); // Redirect to login after successful registration
     } catch (error) {
       console.error("Registration error:", error);
+      setErrors({
+        studentId: "Registration failed. Please try again.",
+      });
     } finally {
       setIsLoading(false);
     }
