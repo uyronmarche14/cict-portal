@@ -10,7 +10,6 @@ import tcu from "@/public/tcu.png";
 import Input from "@/app/components/ui/inputField";
 import Button from "@/app/components/ui/button";
 import { LoginFormData } from "@/app/types/auth";
-// import register from "@/app/auth/registration";
 
 export default function LoginForm() {
   const router = useRouter();
